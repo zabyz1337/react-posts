@@ -1,0 +1,89 @@
+.panel {
+  background: rgba(63, 98, 214, 0.16);
+  padding: 36px 28px;
+  border-radius: 10px;
+  min-height: 720px;
+}
+
+.title {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.box {
+  background: rgba(63, 98, 214, 0.22);
+  border-radius: 12px;
+  padding: 22px;
+  max-width: 360px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.avatarWrap {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+.input,
+.textarea {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.22);
+  outline: none;
+}
+
+.textarea {
+  resize: none;
+}
+
+.error {
+  color: #8b0000;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.publishBtn {
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 14px;
+  background: rgba(0, 0, 0, 0.18);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.publishBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
