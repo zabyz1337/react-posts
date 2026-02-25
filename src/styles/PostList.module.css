@@ -1,0 +1,49 @@
+.panel {
+  background: rgba(63, 98, 214, 0.16);
+  padding: 36px 28px;
+  border-radius: 10px;
+  min-height: 720px;
+}
+
+.title {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.list {
+  display: grid;
+  gap: 18px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.nextBtn {
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.16);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.nextBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.state {
+  padding: 14px;
+  opacity: 0.85;
+}
+
+.stateError {
+  padding: 14px;
+  color: #8b0000;
+  font-weight: 800;
+}
