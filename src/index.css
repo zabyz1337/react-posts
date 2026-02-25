@@ -1,5 +1,30 @@
+/*
+  THEME (теплая желтая)
+  Меняй значения тут — и вся палитра будет обновляться.
+*/
+:root {
+  --ink: #2b1d14;
+
+  --page-a: #fff3bf;
+  --page-b: #ffd36e;
+  --page-c: #fff8e6;
+
+  --panel-a: rgba(255, 228, 156, 0.62);
+  --panel-b: rgba(255, 214, 120, 0.42);
+  --panel-border: rgba(210, 130, 0, 0.18);
+
+  --card-a: rgba(255, 252, 235, 0.92);
+  --card-b: rgba(255, 238, 185, 0.82);
+  --card-border: rgba(210, 130, 0, 0.16);
+
+  --btn-a: #ffd166;
+  --btn-b: #ffb703;
+  --btn-shadow: rgba(43, 29, 20, 0.14);
+}
+
 body {
   margin: 0;
+  color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

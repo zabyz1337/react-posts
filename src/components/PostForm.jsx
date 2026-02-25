@@ -12,10 +12,11 @@ export default function PostForm({ onCreated }) {
   } = useForm({ mode: "onSubmit" });
 
   async function onSubmit(values) {
-    await api.post("/posts", {
-      title: values.title.trim(),
-      text: values.text.trim(),
+    await api.post("/post", {
+      title: values.title,
+      text: values.text,
     });
+
     reset();
     onCreated?.();
   }

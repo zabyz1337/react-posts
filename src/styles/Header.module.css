@@ -1,15 +1,18 @@
 .header {
-  background: #3f62d6;
   height: 124px;
   display: flex;
   align-items: center;
+
+  background: linear-gradient(180deg, var(--btn-a) 0%, var(--btn-b) 100%);
+  border-bottom: 1px solid rgba(43, 29, 20, 0.12);
 }
 
 .inner {
   width: 100%;
-  max-width: 1220px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
+
   display: flex;
   align-items: center;
   gap: 56px;
@@ -26,12 +29,13 @@
   width: 44px;
   height: 44px;
   object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgba(43, 29, 20, 0.18));
 }
 
 .brandText {
-  font-weight: 800;
-  color: #0a0a0a;
-  letter-spacing: 0.5px;
+  font-weight: 950;
+  letter-spacing: 0.6px;
+  color: var(--ink);
 }
 
 .nav {
@@ -41,13 +45,17 @@
 }
 
 .link {
-  color: #0a0a0a;
+  color: rgba(43, 29, 20, 0.9);
   text-decoration: none;
-  font-weight: 700;
-  opacity: 0.9;
+  font-weight: 900;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition:
+    background 140ms ease,
+    transform 140ms ease;
 }
 
 .link:hover {
-  opacity: 1;
-  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
 }

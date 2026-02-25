@@ -1,20 +1,29 @@
 .panel {
-  background: rgba(63, 98, 214, 0.16);
-  padding: 36px 28px;
-  border-radius: 10px;
-  min-height: 720px;
+  background: linear-gradient(180deg, var(--panel-a) 0%, var(--panel-b) 100%);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+
+  /* ОТСТУПЫ КАК В МАКЕТЕ: больше воздуха внутри секции */
+  padding: 44px 44px;
+  min-height: 887px;
+
+  box-shadow:
+    0 18px 50px rgba(43, 29, 20, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 .title {
-  margin: 0 0 28px;
+  margin: 0 0 36px;
   text-align: center;
   font-size: 34px;
-  font-weight: 900;
+  font-weight: 950;
+  letter-spacing: 0.3px;
 }
 
 .list {
   display: grid;
-  gap: 18px;
+  /* расстояние между карточками постов */
+  gap: 24px;
 }
 
 .bottom {
@@ -25,16 +34,30 @@
 
 .nextBtn {
   border: 0;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 10px 18px;
-  background: rgba(0, 0, 0, 0.16);
-  font-weight: 800;
+
+  background: linear-gradient(180deg, var(--btn-a) 0%, var(--btn-b) 100%);
+  color: var(--ink);
+  font-weight: 950;
   cursor: pointer;
+
+  box-shadow: 0 10px 20px var(--btn-shadow);
+  transition:
+    transform 120ms ease,
+    filter 120ms ease;
+}
+
+.nextBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
 }
 
 .nextBtn:disabled {
-  opacity: 0.5;
+  opacity: 0.55;
   cursor: default;
+  transform: none;
+  box-shadow: none;
 }
 
 .state {
@@ -45,5 +68,5 @@
 .stateError {
   padding: 14px;
   color: #8b0000;
-  font-weight: 800;
+  font-weight: 900;
 }

@@ -1,25 +1,38 @@
 .panel {
-  background: rgba(63, 98, 214, 0.16);
-  padding: 36px 28px;
-  border-radius: 10px;
-  min-height: 720px;
+  background: linear-gradient(180deg, var(--panel-a) 0%, var(--panel-b) 100%);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+
+  padding: 44px 44px;
+  min-height: 887px;
+
+  box-shadow:
+    0 18px 50px rgba(43, 29, 20, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 .title {
   margin: 0 0 28px;
   text-align: center;
   font-size: 34px;
-  font-weight: 900;
+  font-weight: 950;
+  letter-spacing: 0.3px;
 }
 
 .box {
-  background: rgba(63, 98, 214, 0.22);
-  border-radius: 12px;
+  background: linear-gradient(180deg, var(--card-a) 0%, var(--card-b) 100%);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
   padding: 22px;
-  max-width: 360px;
+  max-width: 420px;
   margin: 0 auto;
+
   display: grid;
-  gap: 14px;
+  grid-template-columns: 70px 1fr;
+  gap: 16px;
+  align-items: start;
+
+  box-shadow: 0 14px 30px rgba(43, 29, 20, 0.1);
 }
 
 .avatarWrap {
@@ -28,13 +41,15 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 179, 120, 0.22);
+  border: 1px solid rgba(255, 170, 96, 0.22);
 }
 
 .avatar {
   width: 38px;
   height: 38px;
   object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgba(43, 29, 20, 0.1));
 }
 
 .form {
@@ -45,18 +60,27 @@
 .label {
   display: grid;
   gap: 6px;
-  font-weight: 700;
+  font-weight: 950;
   font-size: 12px;
   opacity: 0.95;
 }
 
 .input,
 .textarea {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 8px 10px;
-  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(43, 29, 20, 0.16);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.65);
   outline: none;
+  transition:
+    box-shadow 120ms ease,
+    border-color 120ms ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgba(255, 122, 50, 0.55);
+  box-shadow: 0 0 0 4px rgba(255, 158, 68, 0.22);
 }
 
 .textarea {
@@ -64,8 +88,8 @@
 }
 
 .error {
-  color: #8b0000;
-  font-weight: 800;
+  color: #7a0010;
+  font-weight: 950;
   font-size: 12px;
 }
 
@@ -76,14 +100,28 @@
 
 .publishBtn {
   border: 0;
-  border-radius: 4px;
-  padding: 8px 14px;
-  background: rgba(0, 0, 0, 0.18);
-  font-weight: 800;
+  border-radius: 12px;
+  padding: 10px 16px;
+
+  background: linear-gradient(180deg, var(--btn-a) 0%, var(--btn-b) 100%);
+  color: var(--ink);
+  font-weight: 950;
   cursor: pointer;
+
+  box-shadow: 0 10px 20px var(--btn-shadow);
+  transition:
+    transform 120ms ease,
+    filter 120ms ease;
+}
+
+.publishBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
 }
 
 .publishBtn:disabled {
   opacity: 0.6;
   cursor: default;
+  transform: none;
+  box-shadow: none;
 }

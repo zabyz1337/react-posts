@@ -16,7 +16,7 @@ export default function PostList({ refreshKey }) {
     setLoading(true);
     setError("");
     try {
-      const res = await api.get("/posts", {
+      const res = await api.get("/post", {
         params: { page: p, limit: LIMIT },
       });
       const data = Array.isArray(res.data) ? res.data : [];
@@ -31,12 +31,11 @@ export default function PostList({ refreshKey }) {
 
   useEffect(() => {
     load(page);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, refreshKey]);
 
   async function handleDelete(id) {
     try {
-      await api.delete(`/posts/${id}`);
+      await api.delete(`/post/${id}`);
       await load(page);
     } catch (e) {
       alert("Не удалось удалить пост");

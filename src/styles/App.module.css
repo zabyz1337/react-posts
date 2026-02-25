@@ -1,6 +1,7 @@
 .page {
   min-height: 100vh;
-  background: #9ad6ee;
+  background: radial-gradient(900px 500px at 15% 0%, var(--page-a) 0%, var(--page-b)
+        45%, var(--page-c) 100%);
   font-family:
     system-ui,
     -apple-system,
@@ -8,21 +9,25 @@
     Roboto,
     Arial,
     sans-serif;
-  color: #0a0a0a;
+  color: var(--ink);
 }
 
 .main {
-  max-width: 1220px;
+  width: 100%;
+  max-width: 1630px;
   margin: 0 auto;
   padding: 42px 24px 64px;
+
   display: grid;
-  grid-template-columns: 1fr 460px;
-  gap: 56px;
+  grid-template-columns: 1043px 507px;
+  column-gap: 80px;
   align-items: start;
+  justify-content: center;
 }
 
 @media (max-width: 1100px) {
   .main {
     grid-template-columns: 1fr;
+    row-gap: 24px;
   }
 }
