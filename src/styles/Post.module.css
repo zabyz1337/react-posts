@@ -1,0 +1,100 @@
+.card {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 18px;
+  background: rgba(63, 98, 214, 0.18);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarWrap {
+  width: 150px;
+  height: 86px;
+  border-radius: 10px;
+  background: rgba(63, 98, 214, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.userText {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.content {
+  display: grid;
+  gap: 10px;
+}
+
+.titleRow {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 12px;
+  align-items: start;
+}
+
+.caption {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.05;
+  white-space: pre-wrap;
+}
+
+.rightMeta {
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+}
+
+.idLabel {
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.idValue {
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.85;
+}
+
+.deleteBtn {
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.16);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: rgba(0, 0, 0, 0.22);
+}
