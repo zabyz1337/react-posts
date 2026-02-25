@@ -1,0 +1,28 @@
+.page {
+  min-height: 100vh;
+  background: #9ad6ee;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #0a0a0a;
+}
+
+.main {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 42px 24px 64px;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 56px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
