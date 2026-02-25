@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/Header";
+import PostForm from "./components/PostForm";
+import PostList from "./components/PostList";
+import styles from "./styles/App.module.css";
 
-function App() {
+export default function App() {
+  const [refreshKey, setRefreshKey] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.page}>
+      <Header />
+      <main className={styles.main}>
+        <PostList refreshKey={refreshKey} />
+        <PostForm onCreated={() => setRefreshKey((x) => x + 1)} />
+      </main>
     </div>
   );
 }
-
-export default App;
