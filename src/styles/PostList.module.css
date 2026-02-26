@@ -2,11 +2,8 @@
   background: linear-gradient(180deg, var(--panel-a) 0%, var(--panel-b) 100%);
   border: 1px solid var(--panel-border);
   border-radius: 18px;
-
-  /* ОТСТУПЫ КАК В МАКЕТЕ: больше воздуха внутри секции */
   padding: 44px 44px;
   min-height: 887px;
-
   box-shadow:
     0 18px 50px rgba(43, 29, 20, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.45);
@@ -22,7 +19,6 @@
 
 .list {
   display: grid;
-  /* расстояние между карточками постов */
   gap: 24px;
 }
 
